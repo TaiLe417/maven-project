@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NopCommerce" parallel="false" thread-count="3">
+    <listeners>
+        <listener class-name="commons.MethodListener"/>
+        <listener class-name="reportConfig.ReportNGListener"/>
+        <listener class-name="reportConfig.ExtentTestListenerV5"/>
+        <listener class-name="reportConfig.AllureTestListener"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+
+    </listeners>
+    <test name="Run on Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.nopcommerce.user.Level_20_Manage_Data"/>
+        </classes>
+    </test>
+</suite>
